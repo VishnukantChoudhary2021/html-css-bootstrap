@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <p>Please fill the form carefully.</p>
+
+    <form>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your full name">
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" placeholder="example@gmail.com">
+            <br><br>
+
+            <label>Password:</label>
+            <input type="password">
+            <br><br>
+
+            <label>Date of Birth:</label>
+            <input type="date">
+            <br><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+            <br><br>
+
+            <label>Phone Number:</label>
+            <input type="tel" placeholder="+91 9876543210">
+            <br><br>
+
+            <label>Profile Photo:</label>
+            <input type="file">
+            <br><br>
+
+            <label>Age:</label>
+            <input type="number" value="18" min="1" max="100">
+            <br><br>
+
+            <label>Website:</label>
+            <input type="url" placeholder="https://example.com">
+
+        </fieldset>
+
+
+        <!-- Address Details -->
+        <fieldset>
+            <legend>Address Details</legend>
+
+            <label>Address:</label>
+            <textarea rows="3" cols="35"
+                placeholder="Enter your address"></textarea>
+            <br><br>
+
+            <label>Country:</label>
+            <select>
+                <option>-- Select Country --</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+            </select>
+            <br><br>
+
+            <label>State:</label>
+            <select>
+                <option>-- Select State --</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Rajasthan</option>
+            </select>
+            <br><br>
+
+            <label>City:</label>
+            <select>
+                <option>-- Select City --</option>
+                <option>Bhopal</option>
+                <option>Indore</option>
+                <option>Delhi</option>
+            </select>
+            <br><br>
+
+            <label>Pin Code:</label>
+            <input type="text" placeholder="Enter pin code">
+
+        </fieldset>
+
+
+        <!-- Course Selection -->
+        <fieldset>
+            <legend>Course Selection</legend>
+
+            <label>Select your preferred courses:</label>
+
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+            <input type="checkbox"> Python
+            <input type="checkbox"> Java
+            <input type="checkbox"> C++
+
+            <br><br>
+
+            <label>Select your favorite subject:</label>
+
+            <select>
+                <option>-- Select Subject --</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>C++</option>
+            </select>
+
+        </fieldset>
+
+
+        <!-- Additional Information -->
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label>Preferred Time:</label>
+            <input type="time">
+            <br><br>
+
+            <label>Color Choice:</label>
+            <input type="color">
+            <br><br>
+
+            <label>Range (Experience):</label>
+            <input type="range" min="0" max="10" value="5">
+            0 - 10 years
+            <br><br>
+
+            <label>Upload Resume:</label>
+            <input type="file">
+
+        </fieldset>
+
+    </form>
+
+
+    <!-- Education Details -->
+
+    <h3>Educational Details</h3>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>S.No.</th>
+            <th>Institute Name</th>
+            <th>Degree</th>
+            <th>Year</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>ABC School</td>
+            <td>10th</td>
+            <td>2019</td>
+            <td>92%</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>XYZ College</td>
+            <td>12th</td>
+            <td>2021</td>
+            <td>88%</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>ABC University</td>
+            <td>B.Tech</td>
+            <td>2025</td>
+            <td>85%</td>
+        </tr>
+    </table>
+
+
+    <!-- Hobbies -->
+
+    <h3>Hobbies</h3>
+
+    <ul>
+        <li>Reading</li>
+        <li>Coding</li>
+        <li>Playing Games</li>
+        <li>Travelling</li>
+    </ul>
+
+
+    <!-- Instructions -->
+
+    <h3>Instructions</h3>
+
+    <ol>
+        <li>Fill all the fields.</li>
+        <li>Upload a recent photo.</li>
+        <li>Submit the form.</li>
+    </ol>
+
+
+    <!-- Progress -->
+
+    <h3>
+        Progress
+        <progress value="70" max="100"></progress>
+        70%
+    </h3>
+
+
+    <!-- Meter -->
+
+    <h3>
+        Skills Meter
+        <meter value="8" min="0" max="10"></meter>
+        8 out of 10
+    </h3>
+
+
+    <!-- Image -->
+
+    <h3>Sample Image</h3>
+
+    <img src="sample.jpg"
+         width="180"
+         height="100"
+         alt="Beautiful Nature">
+
+    <br>
+
+    <center>Beautiful Nature</center>
+
+
+    <!-- Audio -->
+
+    <h3>Audio Sample</h3>
+
+    <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+
+    <!-- Video -->
+
+    <h3>Video Sample</h3>
+
+    <video width="255" height="145" controls>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <br><br>
+
+
+    <!-- Buttons -->
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</body>
+</html>

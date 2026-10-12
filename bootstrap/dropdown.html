@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #5bb3be; /* Teal background from the image */
+      padding: 30px;
+    }
+
+    /* Navbar Container */
+    .navbar {
+      background-color: #1a2226;
+      border-bottom: 3px solid #ff7b1a;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+    }
+
+    /* Top-level Menu Items */
+    .nav-item {
+      position: relative;
+      border-right: 1px solid #4a545a;
+    }
+
+    .nav-item:first-child {
+      border-left: 1px solid #4a545a;
+    }
+
+    .nav-link {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-size: 17px;
+      transition: background-color 0.2s ease;
+    }
+
+    /* Hover effect on parent item */
+    .nav-item:hover > .nav-link {
+      background-color: #ff7b1a;
+      color: #ffffff;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      min-width: 150px;
+      list-style: none;
+      background-color: #4a555c;
+      border: 2px solid #ff7b1a;
+      border-top: none;
+      box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+      z-index: 100;
+    }
+
+    /* Show dropdown on hover */
+    .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Dropdown Items */
+    .dropdown-item {
+      border-bottom: 2px solid #ff7b1a;
+    }
+
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-link {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 16px;
+      font-size: 15px;
+      transition: background-color 0.2s ease;
+    }
+
+    .dropdown-link:hover {
+      background-color: #3b444a;
+    }
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link">vishnukant</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">service</a></li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">products</a>
+                <ul>
+                    <li>product 1</li>
+                    <li>product 2</li>
+                    <li>product 3</li>
+                </ul>
+            </li>
+            <li><a href="#">service</a></li>
+            <li> <a href="#">users</a></li>
+            <li><a href="#">login</a></li>
+        </ul>
+    </nav>
+
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Product</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><a href="#" class="dropdown-link">Product 1</a></li>
+          <li class="dropdown-item"><a href="#" class="dropdown-link">Product 2</a></li>
+          <li class="dropdown-item"><a href="#" class="dropdown-link">Product 3</a></li>
+          <li class="dropdown-item"><a href="#" class="dropdown-link">Product 4</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Users</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

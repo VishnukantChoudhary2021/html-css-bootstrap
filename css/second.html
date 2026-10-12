@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .border{
+            border-style:groove ;
+            border-color: aqua;
+            border-radius: 50px;
+        } */
+        .border{
+            border-bottom:5px solid green ;
+        }
+        .b1{
+            border-style:ridge ;
+        }
+
+        /* div{
+            width: 300px;
+            border: 10px solid red;
+            margin: 70px;
+            padding: 70px;
+            
+        } */
+
+        .continer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: pink;
+
+        }
+        .continer div{
+              background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+
+        }
+        @media (max-width:330px) {
+            .continer{
+            flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+     <h2 class="border">vaishnavi</h2>
+    <h2 class="b1">vishnu</h2> 
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit necessitatibus temporibus consequatur maiores, a nostrum minus adipisci animi quia, est reiciendis nobis totam esse mollitia. Error rem inventore facilis eaque!</p>
+    </div>
+
+    <div class="continer">
+        <div>1</div>
+        <div style="flex-grow: 3;">2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

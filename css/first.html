@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Window</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-box {
+            width: 650px;
+            padding: 35px;
+
+            background-color: rgba(0, 0, 0, 0.75);
+
+            text-align: center;
+            color: white;
+
+            border-radius: 5px;
+        }
+
+        .profile {
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+
+            margin-top: -150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin: 10px 0 50px;
+        }
+
+        .input-box {
+            width: 90%;
+
+            margin: 30px auto;
+
+            border-bottom: 3px solid white;
+        }
+
+        .input-box input {
+            width: 100%;
+
+            padding: 12px 10px;
+
+            background: transparent;
+            border: none;
+            outline: none;
+
+            color: white;
+            font-size: 18px;
+        }
+
+        .input-box input::placeholder {
+            color: #ddd;
+        }
+
+        .terms {
+            width: 90%;
+            margin: 40px auto 30px;
+
+            text-align: left;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .terms a {
+            color: white;
+        }
+
+        .login-btn {
+            width: 90%;
+
+            padding: 15px;
+
+            border: none;
+            border-radius: 5px;
+
+            background-color: #00d000;
+
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <!-- Profile Image -->
+        <img src="profile.png" class="profile" alt="Profile">
+
+        <h1>LOGIN WINDOW</h1>
+
+        <!-- Email -->
+        <div class="input-box">
+            <input type="email" placeholder="Your Email Address">
+        </div>
+
+        <!-- Password -->
+        <div class="input-box">
+            <input type="password" placeholder="Your Password">
+        </div>
+
+        <!-- Terms -->
+        <div class="terms">
+            <input type="checkbox" id="terms">
+
+            <label for="terms">
+                Agree With
+                <a href="#">Terms & Condition</a>
+            </label>
+        </div>
+
+        <!-- Login Button -->
+        <button class="login-btn">
+            Login
+        </button>
+
+    </div>
+
+</body>
+
+</html>

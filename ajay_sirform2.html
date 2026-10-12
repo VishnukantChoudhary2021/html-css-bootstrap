@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+<!-- 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .form-container {
+            width: 700px;
+            margin: auto;
+            background-color: #ff3333;
+            padding: 15px;
+            border: 2px dashed black;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .label {
+            width: 180px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            padding: 7px;
+            border: none;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 240px;
+        }
+
+        textarea {
+            width: 340px;
+            height: 130px;
+        }
+
+        .note {
+            margin-left: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 30px;
+            margin: 5px;
+            border: none;
+        }
+    </style> -->
+</head>
+
+<body style="background-color: red;">
+
+    <h2>Student Registration Form Using Table in HTML</h2>
+
+    <div class="form-container">
+
+        <form>
+
+            <table>
+
+                <!-- First Name -->
+                <tr>
+                    <td class="label">First Name</td>
+                    <td>
+                        <input type="text" maxlength="50" placeholder="Ghanendra">
+                        <span class="note">(Max 50 Characters Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- Last Name -->
+                <tr>
+                    <td class="label">Last Name</td>
+                    <td>
+                        <input type="text" maxlength="50" placeholder="Yadav">
+                        <span class="note">(Max 50 Characters Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- Email -->
+                <tr>
+                    <td class="label">Email ID</td>
+                    <td>
+                        <input type="email" placeholder="yghandendra@gmail.com">
+                    </td>
+                </tr>
+
+                <!-- Mobile -->
+                <tr>
+                    <td class="label">Mobile Number</td>
+                    <td>
+                        <input type="tel"
+                               pattern="[6-9][0-9]{9}"
+                               maxlength="10"
+                               placeholder="7842xxxxxx">
+                        <span class="note">(10 Digits Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- Gender -->
+                <tr>
+                    <td class="label">Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="male">
+                        Male
+
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </td>
+                </tr>
+
+                <!-- DOB -->
+                <tr>
+                    <td class="label">Date of Birth (DOB)</td>
+                    <td>
+                        <select>
+                            <option>Day</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+
+                        <select>
+                            <option>Month</option>
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                        </select>
+
+                        <select>
+                            <option>Year</option>
+                            <option>2000</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                            <option>2003</option>
+                            <option>2004</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Address -->
+                <tr>
+                    <td class="label">Address</td>
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+
+                <!-- City -->
+                <tr>
+                    <td class="label">City</td>
+                    <td>
+                        <input type="text" maxlength="50" placeholder="Bangalore">
+                        <span class="note">(Max 50 Characters Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- Pin Code -->
+                <tr>
+                    <td class="label">Pin Code</td>
+                    <td>
+                        <input type="text"
+                               maxlength="6"
+                               pattern="[0-9]{6}"
+                               placeholder="560068">
+                        <span class="note">(Max 6 Numbers Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- State -->
+                <tr>
+                    <td class="label">State</td>
+                    <td>
+                        <input type="text" maxlength="50" placeholder="Karnataka">
+                        <span class="note">(Max 50 Characters Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- Country -->
+                <tr>
+                    <td class="label">Country</td>
+                    <td>
+                        <input type="text" placeholder="India">
+                    </td>
+                </tr>
+
+                <!-- Hobbies -->
+                <tr>
+                    <td class="label">Hobbies</td>
+                    <td>
+                        <input type="checkbox" name="hobby" value="drawing">
+                        Drawing
+
+                        <input type="checkbox" name="hobby" value="singing">
+                        Singing
+
+                        <input type="checkbox" name="hobby" value="dancing">
+                        Dancing
+
+                        <input type="checkbox" name="hobby" value="sketching">
+                        Sketching
+
+                        <br>
+
+                        <input type="checkbox" name="hobby" value="others">
+                        Others
+
+                        <input type="text"
+                               maxlength="50"
+                               placeholder="Ex-Teaching">
+
+                        <span>(Max 50 Characters Allowed)</span>
+                    </td>
+                </tr>
+
+                <!-- Qualification -->
+                <tr>
+                    <td class="label">Qualification</td>
+                    <td>
+                        <input type="checkbox" name="qualification">
+                        High School (10th)
+                        <br>
+
+                        <input type="checkbox" name="qualification">
+                        Higher School (12th)
+                        <br>
+
+                        <input type="checkbox" name="qualification">
+                        Graduation (Bachelors)
+                        <br>
+
+                        <input type="checkbox" name="qualification">
+                        Post Graduation (Masters)
+                        <br>
+
+                        <input type="checkbox" name="qualification">
+                        Phd
+                    </td>
+                </tr>
+
+                <!-- Courses -->
+                <tr>
+                    <td class="label">Courses Applied For</td>
+                    <td>
+                        <input type="radio" name="course">
+                        BCA (Bachelor of Computer Applications)
+                        <br>
+
+                        <input type="radio" name="course">
+                        B.Com (Bachelor of Commerce)
+                        <br>
+
+                        <input type="radio" name="course">
+                        B.Sc (Bachelor of Science)
+                        <br>
+
+                        <input type="radio" name="course">
+                        BA (Bachelor of Arts)
+                        <br>
+
+                        <input type="radio" name="course">
+                        MCA (Master of Computer Applications)
+                        <br>
+
+                        <input type="radio" name="course">
+                        M.Com (Master of Commerce)
+                        <br>
+
+                        <input type="radio" name="course">
+                        M.Sc (Master of Science)
+                        <br>
+
+                        <input type="radio" name="course">
+                        MA (Master of Arts)
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

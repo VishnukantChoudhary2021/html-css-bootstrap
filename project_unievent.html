@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+
+      :root {
+      --primary-blue: #4f46e5;
+      --primary-indigo: #4338ca;
+      --brand-blue: #2563eb;
+      --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --bg-card: #ffffff;
+      --border-light: #f1f5f9;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+        background-color: rgb(62, 68, 74);
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: #ffffff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6, .brand-font {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar {
+      padding-top: 1.1rem;
+      padding-bottom: 1.1rem;
+      background-color: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(241, 245, 249, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 70px;
+}
+
+.hero-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Explore Events button */
+.explore-btn {
+    color: white;
+    background: linear-gradient(135deg, #7045e8, #159fe5);
+}
+
+/* Join Now button */
+.join-btn {
+    color: #333;
+    background-color: white;
+    border: 2px solid #7045e8 !important;
+}
+
+/* Hover effect for both buttons */
+.hero-buttons button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(80, 70, 200, 0.3);
+}
+
+/* Click effect */
+.hero-buttons button:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+    .page{
+
+        background-color: aqua;
+        margin-top: 40px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inside_main{
+        color: rgb(81, 81, 141);
+        margin-top: 70px;
+        display: flex;
+        margin-right: 40px;
+        gap: 30px;
+        justify-content: space-around;
+        
+
+    }
+    .inside_cards{
+        margin-right: 50px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+      
+        
+    }
+
+ 
+    
+    .inside_cards div{
+         transition: all 0.3s ease;
+        gap: 30%;
+        margin-right: 50px;
+    }
+       .inside_cards div:hover {
+    background-color: lightblue;
+    cursor: pointer;
+    transform: scale(1.05) translateY(-8px);
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+    .footer{
+        margin-top: 70px;
+        gap: 100px;
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(30, 102, 131);
+    }
+
+
+.nav_button {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+/* Sign In button */
+.btn-signin {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    color: #7045e8;
+    background-color: #f3efff;
+}
+
+/* Get Started button */
+.btn-get-started {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7045e8, #159fe5);
+    box-shadow: 0 4px 12px rgba(112, 69, 232, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-get-started:hover {
+    color: white;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 22px rgba(112, 69, 232, 0.35);
+}
+
+.btn-get-started:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="brand-logo-box">
+          <i class="bi bi-mortarboard-fill"></i>
+        </div>
+        <span class="brand-title brand-font">CampusHub</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+
+        <div class="nav_button">
+          <a href="#signin" class="btn-signin">Sign In</a>
+          <a href="#get-started" class="btn-get-started">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <h1>Discover and join campus event</h1>
+    <h4>From cultural fests to sports tournaments, academic seminars to technical hackathons <br> – find and register for all campus events in one place.</h4>
+
+  
+<div class="hero-buttons">
+    <button class="explore-btn">
+        <h4>Explore Events →</h4>
+    </button>
+
+    <button class="join-btn">
+        <h4>Join Now</h4>
+    </button>
+</div>
+
+   
+  </div>
+   <div class="inside_main">
+
+        <div> <h1>500+</h1>
+        <p>sport</p></div>
+
+        <div><h1>250+</h1>
+        <p>cultural</p></div>
+
+        <div><h1>20+</h1><p>department</p></div>
+
+
+    </div>
+ <div class="cards">
+
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h1>explore by caregory</h1>
+
+        <p >Find events that match your  <br>interests – from cultural festivities to competitive sports</p>
+    </div>
+
+    <div class="inside_cards">
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h2 class="card-title">cultural</h2>
+            <p class="card-text">Dance, music ,darama</p>
+            <a href="#" class="btn btn-primary">Explore-></a>
+        </div>
+        </div>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">sports</h2>
+    <p class="card-text">cricekt, football , kabbadi</p>
+    <a href="#" class="btn btn-primary">Explore-></a>
+  </div>
+</div>
+
+
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">Technical "<,/>>"</h2>
+    <p class="card-text">coding,hackathons,quizs</p>
+    <a href="#" class="btn btn-primary">Explore-></a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ </div>
+
+
+
+    
+
+
+    <div class="footer">
+
+
+        <div><h1>campushub</h1>
+            <h4>Empowering students to connect, organize, and participate <br>in campus activities seamlessly. Your one-stop <br>destination for all college experiences</h4>
+        
+        </div>
+
+        <div>
+            <h1 > quick links</h1>
+            <p>All Events <br>
+Upcoming Events <br>
+Event Calendar <br>
+For Organizers</p>
+        </div>
+
+        <div>
+<h3>support</h3>
+<p>
+    <a href="#">contact us</a><br>
+    <a href="#">about us</a>
+</p>
+        </div>
+
+
+        <div>
+            <h1>contact us</h1>
+            <p>
+University Campus, Main Building, Room 101 <br>
++1 234 567 8900 <br>
+support@campushub.edu</p>
+        </div>
+    </div>
+
+</body>
+</html>
