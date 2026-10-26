@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+'''import matplotlib.pyplot as plt
 passs=0
 numbers=[5,4,3,2,1]
 y=[10,20,30,40,50]
@@ -10,7 +10,7 @@ plt.title("population")
 plt.show()
 
 plt.plot(numbers,y,label="student marks" )
-plt.grid()
+plt.grid()'''
 # for i in range(len(numbers)-1):
 #     swap=False
 #     passs+=1
@@ -36,3 +36,12 @@ for i in range(n-1):
 
 print(passs)
 print(numbers)'''
+
+
+
+nums = [1,-1,2,-2,3,-3]
+n=len(nums)
+sub=0
+for i in range(n):
+    if i%2==0:
+        sub=
